@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- funciones javascript  -->
+
+<!-- fin de funciones javascript -->
+
+<!-- espacios de menu y logos de menu -->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'>
+<!-- fin de espacios de menu y logos de menu   -->
+
+<!-- diseño de pagina -->
+    <link rel="stylesheet" href="../css/paginamenu.css">
+    <link rel="stylesheet" href="../css/registros y tablas.css">
+<!-- fin de diseño de pagina -->
+
+
+
+    
+
+    <title>ANIMEX</title>
+</head>
+<body>
+
+
+
+
+  <!-- MENU DE INICIO -->
+
+<nav class="navbar " id="menu">
+    <a class="navbar-brand navbar-logo" href="/menu">ANIMEX</a>
+    <a class="navbar-brand navbar-logo" href="/menu"> <%= uss %></a>
+   
+    <ul>
+      <li class="nav-item"><a class="nav-link" href="/usuarios">USUARIOS</a></li>
+      <li class="nav-item"><a class="nav-link" href="/clientes">CLIENTES</a></li>
+      <li class="nav-item"><a class="nav-link" href="/reportes">REPORTES</a>
+        <ul>
+          <li class="nav-item"><a class="nav-link" href="tabla-1">USUARIOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="tabla-2">CLIENTE</a></li>
+          <li class="nav-item"><a class="nav-link" href="tabla-3">PROVEEDORES</a></li>
+          <li class="nav-item"><a class="nav-link" href="tabla-4">PRODUCT</a></li>
+        </ul>
+        
+      <li><a href="/proveedores">PROVEEDORES</a>
+      <li><a href="/productos">PRODUCTOS</a>
+      <li><a href="/ventas">VENTAS</a>
+      <li><a href="/cerrar">CERRAR</a>
+
+      </li>
+
+
+
+
+    </ul>
+</nav>
+
+
+
+<section>
+</form>
+
+
+    <table cellpadding="0" cellspacing="0" class="responsive-table">
+        <thead>
+            <tr>
+                <th scope="col"> CODIGO  </th>
+                <th scope="col"> IVA DE PRODUCTO </th>
+                <th scope="col"> NIT DEL PRODUCTO</th>
+                <th scope="col"> NOMBRE PRODCUTO</th>
+                <th scope="col"> PRECIO DE COMPRA</th>
+                <th scope="col"> PRECIO DE VENTA</th>
+  
+            </tr>
+        </thead>
+  <form action="" none="frm" id="frm"  autocomplete="off">
+  
+    <thead>            
+  
+      
+    <tr>
+  
+    </thead>
+  <tbody>
+    <% datos.forEach(function(datos){%>
+  
+        
+      						
+        <tr>
+
+            <td><input  id="form__inputt" type="text"  value="<%=datos.codpro%>"                id="cedd"    name="codpro"                     class="ced"         ></td>
+            <td><input  id="form__inputt" type="text"  value="<%=datos.ivacom%>"                id="ema"    name="ivacom"                  class="ema"         ></td>
+            <td><input  id="form__inputt" type="text"  value="<%=datos.nitprov%>"               id="nom"    name="nitprov"                  class="nom"         ></td>
+            <td><input  id="form__inputt" type="text"  value="<%=datos.nompro%>"                id="pass"   name="nompro"                        class="pass"        ></td>
+            <td><input  id="form__inputt" type="text"  value="<%=datos.preccom%>"               id="uss"     name="preccom"                  class="us"          ></td>
+            <td><input  id="form__inputt" type="text"  value="<%=datos.precven%>"               id="uss"     name="precven"                  class="us"          ></td>
+    
+  
+       <%})%> 
+  
+  </tbody>
+        
+  
+  
+  
+  </form>
+  
+</section>
+
+
+
+</body>
+</html>  

@@ -1,0 +1,112 @@
+* {
+  font-style: italic;
+}
+
+body {
+  background-image: url("https://1.bp.blogspot.com/-GNVEY9bX4I0/YJ2zpdTJosI/AAAAAAAAd6c/2vivRPihvPUH2DqiVGfpwGvup5gMcvnsQCLcBGAsYHQ/s0/satoru-gojo-jujutsu-kaisen_3840x2160_xtrafondos.com.jpg");
+  width: 99%;
+  height: 98vh;
+  background-size: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  width: 600px;
+  height: 600px;
+  box-shadow: 10px 10px 10px #900C3F, -10px -10px 10px #00aeff;
+  border-radius: 60%;
+  background-color: rgba(255, 255, 255, 0.056);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.b1 {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+}
+
+.casillas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form__input {
+  width: 90%;
+  height: 40px;
+  margin-top: 5%;
+  font-size: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: inset 2px 2px 4px #ff0000, inset -2px -2px 4px #00d0ff;
+  display: flex;
+  text-align: center;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button {
+  width: 50%;
+  height: 30px;
+  margin-top: 5%;
+  background-color: #0040ff87;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  letter-spacing: 0;
+  background-color: rgba(2, 89, 113, 0.42);
+}
+
+.button:hover,
+.button:active {
+  letter-spacing: 5px;
+}
+
+.button:after,
+.button:before {
+  backface-visibility: hidden;
+  border: 1px solid rgba(#fff, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.button:hover:after,
+.button:hover:before {
+  backface-visibility: hidden;
+  border-color: #fff;
+  transition: width 350ms ease-in-out;
+  width: 70%;
+}
+
+.button:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 70%;
+}

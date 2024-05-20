@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- funciones javascript  -->
+  <script src="/js/jquery-3.6.0.min.js"></script>
+  <script src="/js/clicon.js"></script>
+  <!-- <script src="/js/clicon.js"></script> -->
+
+  <!-- fin de funciones javascript -->
+
+  <!-- espacios de menu y logos de menu -->
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'>
+  <!-- fin de espacios de menu y logos de menu   -->
+
+  <!-- diseño de pagina -->
+  <link rel="stylesheet" href="../css/paginamenu.css">
+  <!-- <link rel="stylesheet" href="../css/registros y tablas.css"> -->
+  <!-- <link rel="stylesheet" href="../css/infor.css"> -->
+  <!-- fin de diseño de pagina -->
+
+
+
+
+
+  <title>ANIMEX</title>
+</head>
+
+<body>
+
+
+
+
+  <!-- MENU DE INICIO -->
+
+  <nav class="navbar " id="menu">
+    <a class="navbar-brand navbar-logo" href="/menu">ANIMEX</a>
+
+    <ul>
+      <li class="nav-item"><a class="nav-link" href="/usuarios"><i class="far fa-address-book"></i>USUARIOS</a></li>
+      <li class="nav-item"><a class="nav-link" href="/clientes"><i class="far fa-clone"></i>CLIENTES</a></li>
+      <li class="van-item"><a class="nav-link" href="/proveedores"><i class="far fa-clone"></i>PROVEEDORES</a>
+      <li class="nav-item"><a class="nav-link" href="/reportes"><i class="far fa-copy"></i>REPORTES</a>
+        <ul>
+          <li class="nav-item"><a class="nav-link" href="tabla-1"><i class="far fa-address-book"></i>USUARIOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="tabla-2"><i class="far fa-clone"></i>CLIENTE</a></li>
+          <li class="nav-item"><a class="nav-link" href="tabla-3"><i class="far fa-clone"></i>PROVEED</a></li>
+          <li class="nav-item"><a class="nav-link" href="tabla-4"><i class="far fa-clone"></i>PRODUCT</a></li>
+          <li class="nav-item"><a class="nav-link" href="tabla-5"><i class="far fa-clone"></i>VENTAS</a></li>
+        </ul>
+
+      <li><a href="/productos"><i class="far fa-calendar-alt"></i>PRODUCTOS</a>
+      <li><a href="/ventas"><i class="far fa-chart-bar"></i>VENTAS</a>
+      <li><a href="/cerrar"><i class="far fa-copy"></i>CERRAR</a>
+
+      </li>
+
+    </ul>
+  </nav>
+
+
+  <section>
+    <form autocomplete="off" class="none">
+      <div class="container-2">
+        <div class="consulta2">
+
+          <select name="cedcli" id="cedcli" class="fom">
+            <option>ELIJA SU DOCUMENTO</option>
+            <% for(i=0; i<clientes.length;i++){%>
+              <option id="fom" value="<%=clientes[i].cedcli%>">
+                <%=clientes[i].cedcli%> - <%=clientes[i].nomcli%>
+              </option>
+              <%}%>
+          </select>
+
+          <input type="number" class="fom" name="indicativo" id="indicativo">
+          <button type="submit" id="uno" class="COMPRAR" name="COMPRAR">Hacer compra</button>
+        </div>
+
+          <% var producto=[]%>
+            <% for(let i=0 ; i < datos.length ; i++){%>
+              <% var arr=datos[i].nompro%>
+                <% producto.push(arr)%>
+                  <%}%>
+
+                    <div class="consulta2">
+                      <input type="text" id="producto1" class="fom1" name="producto1" placeholder="CODIGO PRODUCTO 1" />
+                      <input type="button" id="uno" class="SIGUIENTE1" name="SIGUIENTE1" value="SIGUIENTE"></input>
+                      <input type="text" id="nombre1" class="fom1" name="nombre1" placeholder="NOMBRE PRODUCTO 1" />
+                      <input type="number" id="cantidad1" class="fom1" name="cantidad1" placeholder="CANTIDAD" />
+                      <input type="button" id="uno" class="CONTINUA1" name="CONTINUA1" value="CONTINUA"></input>
+                      <input type="text" id="iva1" class="fom1" name="iva1" placeholder="IVA" />
+                      <input type="text" id="valor1" class="fom1" name="valor1" placeholder="TOTAL DE VENTA " />
+                    </div>
+                    <div class="consulta2">
+                      <input type="text" id="producto2" class="fom1" name="producto2" placeholder="CODIGO PRODUCTO 2" />
+                      <input type="button" id="uno" class="SIGUIENTE2" name="SIGUIENTE2" value="SIGUIENTE"></input>
+                      <input type="text" id="nombre2" class="fom1" name="nombre2" placeholder="NOMBRE PRODUCTO 2" />
+                      <input type="number" id="cantidad2" class="fom1" name="cantidad2" placeholder="CANTIDAD" />
+                      <input type="button" id="uno" class="CONTINUA2" name="CONTINUA2" value="CONTINUA"></input>
+                      <input type="text" id="iva2" class="fom1" name="iva2" placeholder="IVA" />
+                      <input type="text" id="valor2" class="fom1" name="valor2" placeholder="TOTAL DE VENTA " />
+                    </div>
+                    <div class="consulta2">
+                      <input type="text" id="producto3" class="fom1" name="producto3" placeholder="CODIGO PRODUCTO 3" />
+                      <input type="button" id="uno" class="SIGUIENTE3" name="SIGUIENTE3" value="SIGUIENTE"></input>
+                      <input type="text" id="nombre3" class="fom1" name="nombre3" placeholder="NOMBRE PRODUCTO 3" />
+                      <input type="number" id="cantidad3" class="fom1" name="cantidad3" placeholder="CANTIDAD" />
+                      <input type="button" id="uno" class="CONTINUA3" name="CONTINUA3" value="CONTINUA"></input>
+                      <input type="text" id="iva3" class="fom1" name="iva3" placeholder="IVA" />
+                      <input type="text" id="valor3" class="fom1" name="valor3" placeholder="TOTAL DE VENTA " />
+                    </div>
+                    <div class="consulta2">
+                      <input type="button" id="uno2" class="TOTAL" name="TOTAL" value="TOTAL"></input>
+                      <input type="text" id="tventa" class="fom2" name="tventa" placeholder="TOTAL DE VENTA" />
+                      <input type="text" id="iva" class="fom2" name="iva" placeholder="TOTAL DE IVA" />
+                      <input type="text" id="ivato" class="fom2" name="ivato" placeholder="TOTAL CON IVA" />
+                    </div>
+      </div>
+    </form>
+  </section>
+
+</body>
+
+</html>

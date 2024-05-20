@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- funciones javascript  -->
+<script src="/js/jquery-3.6.0.min.js"></script>
+<script src="/js/elimin.js"></script>
+<script src="/js/actualiz.js"></script>
+<script src="/js/ingres.js"></script>
+<script src="/js/consult.js"></script>
+
+<!-- fin de funciones javascript -->
+
+<!-- espacios de menu y logos de menu -->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'>
+<!-- fin de espacios de menu y logos de menu   -->
+
+<!-- diseño de pagina -->
+    <link rel="stylesheet" href="../css/paginamenu.css">
+    <link rel="stylesheet" href="../css/registros y tablas.css">
+    <link rel="stylesheet" href="../css/infor.css">
+
+<!-- fin de diseño de pagina -->
+
+
+
+    
+
+    <title>ANIMEX</title>
+</head>
+<body>
+
+
+
+
+  <!-- MENU DE INICIO -->
+
+<nav class="navbar navbar-expand-custom navbar-mainbg">
+    <a class="navbar-brand navbar-logo" href="/menu">ANIMEX</a>
+
+    <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-bars text-white"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            
+
+        <ul class="navbar-nav ml-auto" class="nombre">
+            <div class="hori-selector"><%= uss %>
+            </div>
+
+
+            <li class="nav-item">
+                <a class="nav-link" href="/usuarios"><i class="far fa-address-book"></i>USUARIOS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/clientes"><i class="far fa-clone"></i>CLIENTES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/productos"><i class="far fa-calendar-alt"></i>PRODUCTOS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/ventas"><i class="far fa-chart-bar"></i>VENTAS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/reportes" ><i class="far fa-copy"></i>REPORTES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/cerrar" ><i class="far fa-copy"></i>CERRAR</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+
+<!-- secion de usuarios -->
+
+<header>
+    <h1 class="logo">PROVEEDORES</h1>
+</header>
+<section>
+
+    <form action="/con"  method="POST" autocomplete="off" class="none">
+
+
+  <div class="container">
+    
+        <input id="form__input" name="nitprov"    class="nitprov"       type="text" placeholder="NIT"/>
+
+        <input id="form__input" name="ciudadprov" class="ciudadprov"    type="text" placeholder="CIUDAD"/>
+
+        <input id="form__input" name="direcprov" class="direcprov"     type="text" placeholder="DIRECCION"/>
+
+        <input id="form__input" name="nomprov"  class="nomprov"      type="text" placeholder="NOMBRE"/>
+
+        <input id="form__input" name="telprov"  class="telprov"      type="text" placeholder="TELEFONO"/>
+
+        <input  type="submit"  value="INGRESAR"     name="btning" class="btning" id="boton"></input>
+        <input  type="submit"  value="ELIMINAR"     name="btneli" class="btneli" id="boton"></input>
+        <input  type="submit"  value="ACTUALIZAR"   name="btnact" class="btnact" id="boton"></input>
+        <input  type="submit"  value="CONSULTAR"    name="btncon" class="btncon" id="boton"></input>
+
+
+
+    </div>
+
+</form>
+
+</section>
+
+
+
+
+
+</body>
+</html>  
